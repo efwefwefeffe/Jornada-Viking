@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#172b3d"><meta name="description" content="Jornada Viking: uma aventura de plataforma com 15 fases.">
+  <title>Jornada Viking — 15 Fases</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><img src="assets/interface/placa-titulo.png" alt=""/><span>JORNADA VIKING</span></div>
+      <div class="stats" aria-live="polite">
+        <div class="stat"><b>Fase</b><span id="fase">1/15</span></div>
+        <div class="stat"><img src="assets/objetos/coracao.png" alt="Vidas"><span id="vidas">5</span></div>
+        <div class="stat"><img src="assets/objetos/moeda-01.png" alt="Moedas"><span id="moedas">0</span></div>
+        <div class="stat"><img src="assets/objetos/estrela.png" alt="Pontos"><span id="pontos">0</span></div>
+        <div class="stat power"><img src="assets/objetos/raio.png" alt="Poder"><span id="poder">NENHUM</span></div>
+      </div>
+      <button class="fullscreen" id="fullscreen" title="Tela cheia">⛶ <span>Tela cheia</span></button>
+    </header>
+    <section class="game-shell" aria-label="Área do jogo">
+      <canvas id="game" width="960" height="540" aria-label="Jogo Jornada Viking"></canvas>
+      <div class="boss-ui" id="bossUI"><div class="boss-name">CHEFÃO</div><div class="boss-track"><div id="bossFill"></div></div></div>
+      <div class="overlay" id="overlay">
+        <div class="dialog">
+          <img class="dialog-sign" src="assets/interface/placa-titulo.png" alt="Jornada Viking">
+          <h1 id="overlayTitle">JORNADA VIKING</h1>
+          <p id="overlayText">Guie o destemido guerreiro por 15 fases cheias de desafios!</p>
+          <p class="help">A/D ou ←/→: mover · Espaço/W/↑: pular · F: machado · R: arremessar</p>
+          <button id="mainAction" class="action">INICIAR AVENTURA</button>
+        </div>
+      </div>
+    </section>
+    <div class="mobile-controls" aria-label="Controles de toque">
+      <div class="move-controls"><button data-key="ArrowLeft" aria-label="Esquerda">◀</button><button data-key="ArrowRight" aria-label="Direita">▶</button></div>
+      <div class="action-controls"><button data-key="KeyF">⚔</button><button data-key="Space">⤒</button><button data-key="KeyR">🪓</button></div>
+    </div>
+    <footer><span>Projeto Jornada Viking</span><span>Use os controles para explorar, coletar moedas e vencer os chefões.</span><button id="pause">Ⅱ Pausar</button></footer>
+  </main>
+  <script src="jogo.js"></script>
+</body></html>
